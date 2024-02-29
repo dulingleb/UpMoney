@@ -1,19 +1,18 @@
 //
-//  ViewController.swift
+//  SettingsViewController.swift
 //  UpMoney
 //
-//  Created by Dulin Gleb on 28.2.24..
+//  Created by Dulin Gleb on 29.2.24..
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 
-
 }
-

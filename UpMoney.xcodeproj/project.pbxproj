@@ -10,9 +10,9 @@
 		968558482B8FDBD30090D5ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968558472B8FDBD30090D5ED /* AppDelegate.swift */; };
 		9685584A2B8FDBD30090D5ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968558492B8FDBD30090D5ED /* SceneDelegate.swift */; };
 		9685584C2B8FDBD30090D5ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9685584B2B8FDBD30090D5ED /* ViewController.swift */; };
-		9685584F2B8FDBD30090D5ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9685584D2B8FDBD30090D5ED /* Main.storyboard */; };
 		968558512B8FDBD40090D5ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968558502B8FDBD40090D5ED /* Assets.xcassets */; };
 		968558542B8FDBD40090D5ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 968558522B8FDBD40090D5ED /* LaunchScreen.storyboard */; };
+		9685585F2B9095520090D5ED /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9685585E2B9095520090D5ED /* TabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +20,10 @@
 		968558472B8FDBD30090D5ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		968558492B8FDBD30090D5ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9685584B2B8FDBD30090D5ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9685584E2B8FDBD30090D5ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		968558502B8FDBD40090D5ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		968558532B8FDBD40090D5ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		968558552B8FDBD40090D5ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9685585E2B9095520090D5ED /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,39 @@
 		968558462B8FDBD30090D5ED /* UpMoney */ = {
 			isa = PBXGroup;
 			children = (
-				968558472B8FDBD30090D5ED /* AppDelegate.swift */,
-				968558492B8FDBD30090D5ED /* SceneDelegate.swift */,
-				9685584B2B8FDBD30090D5ED /* ViewController.swift */,
-				9685584D2B8FDBD30090D5ED /* Main.storyboard */,
-				968558502B8FDBD40090D5ED /* Assets.xcassets */,
-				968558522B8FDBD40090D5ED /* LaunchScreen.storyboard */,
+				9685585B2B8FDD320090D5ED /* App */,
+				9685585D2B9094D90090D5ED /* Views */,
+				9685585C2B8FDD430090D5ED /* Assets */,
 				968558552B8FDBD40090D5ED /* Info.plist */,
 			);
 			path = UpMoney;
+			sourceTree = "<group>";
+		};
+		9685585B2B8FDD320090D5ED /* App */ = {
+			isa = PBXGroup;
+			children = (
+				968558472B8FDBD30090D5ED /* AppDelegate.swift */,
+				968558492B8FDBD30090D5ED /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9685585C2B8FDD430090D5ED /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				968558502B8FDBD40090D5ED /* Assets.xcassets */,
+				968558522B8FDBD40090D5ED /* LaunchScreen.storyboard */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		9685585D2B9094D90090D5ED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9685584B2B8FDBD30090D5ED /* ViewController.swift */,
+				9685585E2B9095520090D5ED /* TabBar.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +151,6 @@
 			files = (
 				968558542B8FDBD40090D5ED /* LaunchScreen.storyboard in Resources */,
 				968558512B8FDBD40090D5ED /* Assets.xcassets in Resources */,
-				9685584F2B8FDBD30090D5ED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,20 +164,13 @@
 				9685584C2B8FDBD30090D5ED /* ViewController.swift in Sources */,
 				968558482B8FDBD30090D5ED /* AppDelegate.swift in Sources */,
 				9685584A2B8FDBD30090D5ED /* SceneDelegate.swift in Sources */,
+				9685585F2B9095520090D5ED /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9685584D2B8FDBD30090D5ED /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9685584E2B8FDBD30090D5ED /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		968558522B8FDBD40090D5ED /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -218,7 +234,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -275,7 +291,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -295,11 +311,14 @@
 				DEVELOPMENT_TEAM = GDZL4G7BLZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UpMoney/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = UpMoney;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,11 +342,14 @@
 				DEVELOPMENT_TEAM = GDZL4G7BLZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UpMoney/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = UpMoney;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

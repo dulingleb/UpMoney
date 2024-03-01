@@ -16,7 +16,7 @@ class Observable<T> {
         }
     }
     
-    init(value: T?) {
+    init(_ value: T?) {
         self.value = value
     }
     

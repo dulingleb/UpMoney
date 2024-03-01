@@ -17,6 +17,10 @@
 		968558672B90AF4D0090D5ED /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968558662B90AF4D0090D5ED /* StatisticsViewController.swift */; };
 		968558692B90AF620090D5ED /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968558682B90AF620090D5ED /* SettingsViewController.swift */; };
 		9685586F2B90CA150090D5ED /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9685586E2B90CA150090D5ED /* Observable.swift */; };
+		968558712B90D5F50090D5ED /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968558702B90D5F50090D5ED /* MainViewModel.swift */; };
+		968558742B90DF5C0090D5ED /* KeyboardPadCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968558732B90DF5C0090D5ED /* KeyboardPadCollectionView.swift */; };
+		968558762B90DF800090D5ED /* KeyboardPadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968558752B90DF800090D5ED /* KeyboardPadCollectionViewCell.swift */; };
+		968558782B9112E40090D5ED /* BottomCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968558772B9112E40090D5ED /* BottomCircleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		968558662B90AF4D0090D5ED /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		968558682B90AF620090D5ED /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9685586E2B90CA150090D5ED /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		968558702B90D5F50090D5ED /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		968558732B90DF5C0090D5ED /* KeyboardPadCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardPadCollectionView.swift; sourceTree = "<group>"; };
+		968558752B90DF800090D5ED /* KeyboardPadCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardPadCollectionViewCell.swift; sourceTree = "<group>"; };
+		968558772B9112E40090D5ED /* BottomCircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCircleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +117,9 @@
 		968558602B90AEE80090D5ED /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				968558722B90DF060090D5ED /* Keyboard */,
 				9685584B2B8FDBD30090D5ED /* MainViewController.swift */,
+				968558772B9112E40090D5ED /* BottomCircleButton.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -155,6 +165,7 @@
 		9685586C2B90B8490090D5ED /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				968558702B90D5F50090D5ED /* MainViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -165,6 +176,15 @@
 				9685586E2B90CA150090D5ED /* Observable.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		968558722B90DF060090D5ED /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				968558732B90DF5C0090D5ED /* KeyboardPadCollectionView.swift */,
+				968558752B90DF800090D5ED /* KeyboardPadCollectionViewCell.swift */,
+			);
+			path = Keyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,9 +262,13 @@
 				968558482B8FDBD30090D5ED /* AppDelegate.swift in Sources */,
 				968558692B90AF620090D5ED /* SettingsViewController.swift in Sources */,
 				968558652B90AF2F0090D5ED /* AccountsViewController.swift in Sources */,
+				968558742B90DF5C0090D5ED /* KeyboardPadCollectionView.swift in Sources */,
 				968558672B90AF4D0090D5ED /* StatisticsViewController.swift in Sources */,
+				968558762B90DF800090D5ED /* KeyboardPadCollectionViewCell.swift in Sources */,
 				9685584A2B8FDBD30090D5ED /* SceneDelegate.swift in Sources */,
 				9685585F2B9095520090D5ED /* TabBar.swift in Sources */,
+				968558782B9112E40090D5ED /* BottomCircleButton.swift in Sources */,
+				968558712B90D5F50090D5ED /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,7 +20,9 @@
 		968558712B90D5F50090D5ED /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968558702B90D5F50090D5ED /* MainViewModel.swift */; };
 		968558742B90DF5C0090D5ED /* KeyboardPadCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968558732B90DF5C0090D5ED /* KeyboardPadCollectionView.swift */; };
 		968558762B90DF800090D5ED /* KeyboardPadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968558752B90DF800090D5ED /* KeyboardPadCollectionViewCell.swift */; };
-		968558782B9112E40090D5ED /* BottomCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968558772B9112E40090D5ED /* BottomCircleButton.swift */; };
+		968558782B9112E40090D5ED /* IconCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968558772B9112E40090D5ED /* IconCircleButton.swift */; };
+		9685587B2B91EACD0090D5ED /* DropDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9685587A2B91EACD0090D5ED /* DropDownButton.swift */; };
+		9685587D2B923CDF0090D5ED /* AppStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9685587C2B923CDE0090D5ED /* AppStyles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +41,9 @@
 		968558702B90D5F50090D5ED /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		968558732B90DF5C0090D5ED /* KeyboardPadCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardPadCollectionView.swift; sourceTree = "<group>"; };
 		968558752B90DF800090D5ED /* KeyboardPadCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardPadCollectionViewCell.swift; sourceTree = "<group>"; };
-		968558772B9112E40090D5ED /* BottomCircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCircleButton.swift; sourceTree = "<group>"; };
+		968558772B9112E40090D5ED /* IconCircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCircleButton.swift; sourceTree = "<group>"; };
+		9685587A2B91EACD0090D5ED /* DropDownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownButton.swift; sourceTree = "<group>"; };
+		9685587C2B923CDE0090D5ED /* AppStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +123,6 @@
 			children = (
 				968558722B90DF060090D5ED /* Keyboard */,
 				9685584B2B8FDBD30090D5ED /* MainViewController.swift */,
-				968558772B9112E40090D5ED /* BottomCircleButton.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 		9685586A2B90B6F10090D5ED /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				968558792B91EA0D0090D5ED /* Buttons */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -174,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				9685586E2B90CA150090D5ED /* Observable.swift */,
+				9685587C2B923CDE0090D5ED /* AppStyles.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -185,6 +190,15 @@
 				968558752B90DF800090D5ED /* KeyboardPadCollectionViewCell.swift */,
 			);
 			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		968558792B91EA0D0090D5ED /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				968558772B9112E40090D5ED /* IconCircleButton.swift */,
+				9685587A2B91EACD0090D5ED /* DropDownButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,16 +272,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				9685586F2B90CA150090D5ED /* Observable.swift in Sources */,
+				9685587D2B923CDF0090D5ED /* AppStyles.swift in Sources */,
 				9685584C2B8FDBD30090D5ED /* MainViewController.swift in Sources */,
 				968558482B8FDBD30090D5ED /* AppDelegate.swift in Sources */,
 				968558692B90AF620090D5ED /* SettingsViewController.swift in Sources */,
 				968558652B90AF2F0090D5ED /* AccountsViewController.swift in Sources */,
 				968558742B90DF5C0090D5ED /* KeyboardPadCollectionView.swift in Sources */,
+				9685587B2B91EACD0090D5ED /* DropDownButton.swift in Sources */,
 				968558672B90AF4D0090D5ED /* StatisticsViewController.swift in Sources */,
 				968558762B90DF800090D5ED /* KeyboardPadCollectionViewCell.swift in Sources */,
 				9685584A2B8FDBD30090D5ED /* SceneDelegate.swift in Sources */,
 				9685585F2B9095520090D5ED /* TabBar.swift in Sources */,
-				968558782B9112E40090D5ED /* BottomCircleButton.swift in Sources */,
+				968558782B9112E40090D5ED /* IconCircleButton.swift in Sources */,
 				968558712B90D5F50090D5ED /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

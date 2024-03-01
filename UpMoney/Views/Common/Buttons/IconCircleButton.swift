@@ -7,8 +7,8 @@
 
 import UIKit
 
-class BottomCircleButton: UIButton {
-
+class IconCircleButton: UIButton {
+    let iconSize = 50.0
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,13 +21,13 @@ class BottomCircleButton: UIButton {
     func configure(iconName: String) {
         let configuration = UIButton.Configuration.gray()
         self.configuration = configuration
-        self.layer.cornerRadius = 25
+        self.layer.cornerRadius = iconSize / 2
         self.clipsToBounds = true
         
         self.setImage(UIImage(named: iconName), for: .normal)
         self.tintColor = UIColor(named: "cBlack")
-        self.widthAnchor.constraint(equalToConstant: 50).isActive = true
-        self.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        self.widthAnchor.constraint(equalToConstant: iconSize).isActive = true
+        self.heightAnchor.constraint(equalToConstant: iconSize).isActive = true
         
         self.isEnabled = false
     }

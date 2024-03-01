@@ -8,9 +8,6 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    private let margin20 = 20.0
-    private let margin36 = 36.0
-    private let margin10 = 10.0
     private let heightBottomBtnStack = 50.0
     
     let keyboardPadCollectionView: KeyboardPadCollectionView = {
@@ -20,14 +17,14 @@ class MainViewController: UIViewController {
         return kPad
     }()
     
-    let calendarButton: BottomCircleButton = {
-        let btn = BottomCircleButton(type: .custom)
+    let calendarButton: IconCircleButton = {
+        let btn = IconCircleButton(type: .custom)
         btn.configure(iconName: "Calendar")
         return btn
     }()
     
-    let commentButton: BottomCircleButton = {
-        let btn = BottomCircleButton(type: .custom)
+    let commentButton: IconCircleButton = {
+        let btn = IconCircleButton(type: .custom)
         btn.configure(iconName: "Edit")
         return btn
     }()
@@ -39,7 +36,7 @@ class MainViewController: UIViewController {
         btn.configuration = configuration
         
         btn.setTitle("Add", for: .normal)
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
+        btn.titleLabel?.font = AppStyles.Font.standartButton
         
         btn.isEnabled = false
         return btn
@@ -48,7 +45,7 @@ class MainViewController: UIViewController {
     let bottomBtnStackView: UIStackView = {
         let botBtnStackView = UIStackView()
         botBtnStackView.axis = .horizontal
-        botBtnStackView.spacing = 10
+        botBtnStackView.spacing = AppStyles.Layout.m10
         botBtnStackView.alignment = .fill
         botBtnStackView.distribution = .fill
         botBtnStackView.translatesAutoresizingMaskIntoConstraints = false
@@ -56,7 +53,28 @@ class MainViewController: UIViewController {
         return botBtnStackView
     }()
     
+    let accountStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = AppStyles.Layout.m10
+        stackView.alignment = .center
+        stackView.distribution = .fill
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return stackView
+    }()
     
+    let amountLabel: UILabel = {
+        let lbl = UILabel()
+        lbl.font = UIFont.systemFont(ofSize: 70, weight: .medium)
+        lbl.textAlignment = .center
+        lbl.textColor = .opaqueSeparator
+        lbl.adjustsFontSizeToFitWidth = true
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        return lbl
+    }()
+    
+    let chooseAccauntButton: DropDownButton = DropDownButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,24 +88,42 @@ class MainViewController: UIViewController {
         bottomBtnStackView.addArrangedSubview(addTransactionButton)
         bottomBtnStackView.addArrangedSubview(commentButton)
         
+        chooseAccauntButton.setRightArrow()
+        chooseAccauntButton.setLeftImage(leftImage: UIImage(named: "Calendar")!, tintColor: .systemBlue)
+        chooseAccauntButton.setTitle("Category", for: .normal)
+        accountStackView.addArrangedSubview(chooseAccauntButton)
+        
+        amountLabel.text = "$0"
         
         view.addSubview(bottomBtnStackView)
         view.addSubview(keyboardPadCollectionView)
+        view.addSubview(accountStackView)
+        view.addSubview(amountLabel)
     }
 }
 
 extension MainViewController {
     private func setConstraints() {
         NSLayoutConstraint.activate([
-            bottomBtnStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant:  -margin20),
-            bottomBtnStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant:  margin36),
-            bottomBtnStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:  -margin36),
+            bottomBtnStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant:  -AppStyles.Layout.m20),
+            bottomBtnStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant:  AppStyles.Layout.m36),
+            bottomBtnStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:  -AppStyles.Layout.m36),
             bottomBtnStackView.heightAnchor.constraint(equalToConstant: heightBottomBtnStack),
             
             keyboardPadCollectionView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            keyboardPadCollectionView.widthAnchor.constraint(equalToConstant: 337),
+            keyboardPadCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -AppStyles.Layout.m36),
+            keyboardPadCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: AppStyles.Layout.m36),
             keyboardPadCollectionView.heightAnchor.constraint(equalToConstant: 218),
-            keyboardPadCollectionView.bottomAnchor.constraint(equalTo: bottomBtnStackView.topAnchor, constant: -margin20)
+            keyboardPadCollectionView.bottomAnchor.constraint(equalTo: bottomBtnStackView.topAnchor, constant: -AppStyles.Layout.m20),
+            
+            accountStackView.bottomAnchor.constraint(equalTo: keyboardPadCollectionView.topAnchor, constant: -AppStyles.Layout.m20),
+            accountStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: AppStyles.Layout.m36),
+            accountStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -AppStyles.Layout.m36),
+            
+            amountLabel.bottomAnchor.constraint(equalTo: accountStackView.topAnchor, constant: -AppStyles.Layout.m36),
+            amountLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -AppStyles.Layout.m36),
+            amountLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: AppStyles.Layout.m36),
+            amountLabel.heightAnchor.constraint(equalToConstant: 70)
         ])
     }
 }

@@ -23,6 +23,8 @@
 		968558782B9112E40090D5ED /* IconCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968558772B9112E40090D5ED /* IconCircleButton.swift */; };
 		9685587B2B91EACD0090D5ED /* DropDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9685587A2B91EACD0090D5ED /* DropDownButton.swift */; };
 		9685587D2B923CDF0090D5ED /* AppStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9685587C2B923CDE0090D5ED /* AppStyles.swift */; };
+		96A5CA9D2B924B6B00F54A3B /* CapsulSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5CA9C2B924B6B00F54A3B /* CapsulSegmentedControl.swift */; };
+		96A5CAA12B924C0600F54A3B /* UIImage + imageFromColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5CAA02B924C0600F54A3B /* UIImage + imageFromColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		968558772B9112E40090D5ED /* IconCircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCircleButton.swift; sourceTree = "<group>"; };
 		9685587A2B91EACD0090D5ED /* DropDownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownButton.swift; sourceTree = "<group>"; };
 		9685587C2B923CDE0090D5ED /* AppStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyles.swift; sourceTree = "<group>"; };
+		96A5CA9C2B924B6B00F54A3B /* CapsulSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsulSegmentedControl.swift; sourceTree = "<group>"; };
+		96A5CAA02B924C0600F54A3B /* UIImage + imageFromColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + imageFromColor.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 		968558462B8FDBD30090D5ED /* UpMoney */ = {
 			isa = PBXGroup;
 			children = (
+				96A5CA9E2B924BE200F54A3B /* Extentions */,
 				9685585B2B8FDD320090D5ED /* App */,
 				9685586B2B90B83E0090D5ED /* Models */,
 				9685586C2B90B8490090D5ED /* ViewModels */,
@@ -154,6 +159,7 @@
 		9685586A2B90B6F10090D5ED /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				96A5CA9B2B924B3500F54A3B /* SegmentedControl */,
 				968558792B91EA0D0090D5ED /* Buttons */,
 			);
 			path = Common;
@@ -199,6 +205,30 @@
 				9685587A2B91EACD0090D5ED /* DropDownButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		96A5CA9B2B924B3500F54A3B /* SegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				96A5CA9C2B924B6B00F54A3B /* CapsulSegmentedControl.swift */,
+			);
+			path = SegmentedControl;
+			sourceTree = "<group>";
+		};
+		96A5CA9E2B924BE200F54A3B /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				96A5CA9F2B924BED00F54A3B /* UIImage */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		96A5CA9F2B924BED00F54A3B /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				96A5CAA02B924C0600F54A3B /* UIImage + imageFromColor.swift */,
+			);
+			path = UIImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,10 +307,12 @@
 				968558482B8FDBD30090D5ED /* AppDelegate.swift in Sources */,
 				968558692B90AF620090D5ED /* SettingsViewController.swift in Sources */,
 				968558652B90AF2F0090D5ED /* AccountsViewController.swift in Sources */,
+				96A5CA9D2B924B6B00F54A3B /* CapsulSegmentedControl.swift in Sources */,
 				968558742B90DF5C0090D5ED /* KeyboardPadCollectionView.swift in Sources */,
 				9685587B2B91EACD0090D5ED /* DropDownButton.swift in Sources */,
 				968558672B90AF4D0090D5ED /* StatisticsViewController.swift in Sources */,
 				968558762B90DF800090D5ED /* KeyboardPadCollectionViewCell.swift in Sources */,
+				96A5CAA12B924C0600F54A3B /* UIImage + imageFromColor.swift in Sources */,
 				9685584A2B8FDBD30090D5ED /* SceneDelegate.swift in Sources */,
 				9685585F2B9095520090D5ED /* TabBar.swift in Sources */,
 				968558782B9112E40090D5ED /* IconCircleButton.swift in Sources */,

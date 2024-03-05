@@ -7,6 +7,16 @@
 
 import UIKit
 
+extension UISegmentedControl {
+    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        let maskPath = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let maskLayer = CAShapeLayer()
+        maskLayer.frame = bounds
+        maskLayer.path = maskPath.cgPath
+        layer.mask = maskLayer
+    }
+}
+
 class MainViewController: UIViewController {
     private let heightBottomBtnStack = 50.0
     
@@ -75,6 +85,13 @@ class MainViewController: UIViewController {
     }()
     
     let chooseAccauntButton: DropDownButton = DropDownButton()
+    
+    let transactionTypeSegment: CapsulSegmentedControl = {
+        let segment = CapsulSegmentedControl(items: ["Expense", "Income", "Transfer"])
+        segment.selectedSegmentIndex = 0
+        segment.translatesAutoresizingMaskIntoConstraints = false
+        return segment
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,6 +116,7 @@ class MainViewController: UIViewController {
         view.addSubview(keyboardPadCollectionView)
         view.addSubview(accountStackView)
         view.addSubview(amountLabel)
+        view.addSubview(transactionTypeSegment)
     }
 }
 
@@ -123,7 +141,11 @@ extension MainViewController {
             amountLabel.bottomAnchor.constraint(equalTo: accountStackView.topAnchor, constant: -AppStyles.Layout.m36),
             amountLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -AppStyles.Layout.m36),
             amountLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: AppStyles.Layout.m36),
-            amountLabel.heightAnchor.constraint(equalToConstant: 70)
+            amountLabel.heightAnchor.constraint(equalToConstant: 70),
+            
+            transactionTypeSegment.bottomAnchor.constraint(equalTo: amountLabel.topAnchor, constant: -AppStyles.Layout.m36),
+            transactionTypeSegment.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: AppStyles.Layout.m36),
+            transactionTypeSegment.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -AppStyles.Layout.m36),
         ])
     }
 }

@@ -19,4 +19,10 @@ struct AppStyles {
     struct Font {
         static let standartButton: UIFont = UIFont.systemFont(ofSize: 17, weight: .semibold)
     }
+    
+    struct Str {
+        static let decimalSeparator: String = "."
+        static let thousendsSeparator: String = " "
+        static let defaultCurrencySymbol = "$"
+    }
 }

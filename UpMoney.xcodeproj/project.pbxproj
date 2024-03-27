@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9618573D2BA3183C001D6700 /* TransactionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9618573C2BA3183C001D6700 /* TransactionType.swift */; };
+		961857432BA5B4C0001D6700 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 961857412BA5B4C0001D6700 /* CoreDataModel.xcdatamodeld */; };
+		961857462BA5BE7D001D6700 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961857452BA5BE7D001D6700 /* CoreDataStack.swift */; };
+		9618574B2BA89CCC001D6700 /* CoreDataStack + Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9618574A2BA89CCC001D6700 /* CoreDataStack + Account.swift */; };
+		9618574D2BA8A106001D6700 /* CoreDataStack + Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9618574C2BA8A106001D6700 /* CoreDataStack + Currency.swift */; };
+		9618575D2BA99C54001D6700 /* CoreDataStack + InitializeDataIfNeeded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9618575C2BA99C54001D6700 /* CoreDataStack + InitializeDataIfNeeded.swift */; };
+		9618575F2BA9DFD7001D6700 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9618575E2BA9DFD7001D6700 /* Icon.swift */; };
+		961857622BA9E8D7001D6700 /* UIColor + HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961857612BA9E8D7001D6700 /* UIColor + HexString.swift */; };
+		961857732BA9F1CE001D6700 /* Account+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961857712BA9F1CE001D6700 /* Account+CoreDataClass.swift */; };
+		961857742BA9F1CE001D6700 /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961857722BA9F1CE001D6700 /* Account+CoreDataProperties.swift */; };
+		961857762BAA0874001D6700 /* Categorieble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961857752BAA0874001D6700 /* Categorieble.swift */; };
 		968558482B8FDBD30090D5ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968558472B8FDBD30090D5ED /* AppDelegate.swift */; };
 		9685584A2B8FDBD30090D5ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968558492B8FDBD30090D5ED /* SceneDelegate.swift */; };
 		9685584C2B8FDBD30090D5ED /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9685584B2B8FDBD30090D5ED /* MainViewController.swift */; };
@@ -18,16 +29,38 @@
 		968558692B90AF620090D5ED /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968558682B90AF620090D5ED /* SettingsViewController.swift */; };
 		9685586F2B90CA150090D5ED /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9685586E2B90CA150090D5ED /* Observable.swift */; };
 		968558712B90D5F50090D5ED /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968558702B90D5F50090D5ED /* MainViewModel.swift */; };
-		968558742B90DF5C0090D5ED /* KeyboardPadCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968558732B90DF5C0090D5ED /* KeyboardPadCollectionView.swift */; };
+		968558742B90DF5C0090D5ED /* KeyboardPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968558732B90DF5C0090D5ED /* KeyboardPadView.swift */; };
 		968558762B90DF800090D5ED /* KeyboardPadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968558752B90DF800090D5ED /* KeyboardPadCollectionViewCell.swift */; };
 		968558782B9112E40090D5ED /* IconCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968558772B9112E40090D5ED /* IconCircleButton.swift */; };
 		9685587B2B91EACD0090D5ED /* DropDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9685587A2B91EACD0090D5ED /* DropDownButton.swift */; };
 		9685587D2B923CDF0090D5ED /* AppStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9685587C2B923CDE0090D5ED /* AppStyles.swift */; };
 		96A5CA9D2B924B6B00F54A3B /* CapsulSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5CA9C2B924B6B00F54A3B /* CapsulSegmentedControl.swift */; };
 		96A5CAA12B924C0600F54A3B /* UIImage + imageFromColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5CAA02B924C0600F54A3B /* UIImage + imageFromColor.swift */; };
+		96B8B6E42BAA3DE3001C448D /* MainScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8B6E32BAA3DE3001C448D /* MainScreenConfigurator.swift */; };
+		96B8B6E62BAB7EE9001C448D /* KeyboardPadCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8B6E52BAB7EE9001C448D /* KeyboardPadCollectionViewDataSource.swift */; };
+		96C0D3902BAC632700C103F4 /* KeyboardPadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96C0D38F2BAC632700C103F4 /* KeyboardPadView.xib */; };
+		96C0D3932BAC860E00C103F4 /* UIViewController + LoadFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C0D3922BAC860E00C103F4 /* UIViewController + LoadFromNib.swift */; };
+		96C0D3952BAC8CD200C103F4 /* KeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C0D3942BAC8CD200C103F4 /* KeyboardButton.swift */; };
+		96C0D3972BAC8E4400C103F4 /* KeyboardPadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C0D3962BAC8E4400C103F4 /* KeyboardPadViewModel.swift */; };
+		96C0D39A2BADBC3A00C103F4 /* UIView + fromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C0D3992BADBC3A00C103F4 /* UIView + fromNib.swift */; };
+		96C0D39C2BADD94E00C103F4 /* KeyboardPadConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C0D39B2BADD94E00C103F4 /* KeyboardPadConfigurator.swift */; };
+		96C0D39F2BB2F3C200C103F4 /* String + hasValidDecimalPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C0D39E2BB2F3C200C103F4 /* String + hasValidDecimalPlaces.swift */; };
+		96C0D3A12BB31F8A00C103F4 /* String + SeparateDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C0D3A02BB31F8A00C103F4 /* String + SeparateDouble.swift */; };
+		96C0D3A72BB3354E00C103F4 /* CoreDataStack + TransactionCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C0D3A62BB3354E00C103F4 /* CoreDataStack + TransactionCategory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9618573C2BA3183C001D6700 /* TransactionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionType.swift; sourceTree = "<group>"; };
+		961857422BA5B4C0001D6700 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		961857452BA5BE7D001D6700 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		9618574A2BA89CCC001D6700 /* CoreDataStack + Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataStack + Account.swift"; sourceTree = "<group>"; };
+		9618574C2BA8A106001D6700 /* CoreDataStack + Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataStack + Currency.swift"; sourceTree = "<group>"; };
+		9618575C2BA99C54001D6700 /* CoreDataStack + InitializeDataIfNeeded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataStack + InitializeDataIfNeeded.swift"; sourceTree = "<group>"; };
+		9618575E2BA9DFD7001D6700 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		961857612BA9E8D7001D6700 /* UIColor + HexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + HexString.swift"; sourceTree = "<group>"; };
+		961857712BA9F1CE001D6700 /* Account+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataClass.swift"; sourceTree = "<group>"; };
+		961857722BA9F1CE001D6700 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		961857752BAA0874001D6700 /* Categorieble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categorieble.swift; sourceTree = "<group>"; };
 		968558442B8FDBD30090D5ED /* UpMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		968558472B8FDBD30090D5ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		968558492B8FDBD30090D5ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,13 +74,24 @@
 		968558682B90AF620090D5ED /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9685586E2B90CA150090D5ED /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		968558702B90D5F50090D5ED /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		968558732B90DF5C0090D5ED /* KeyboardPadCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardPadCollectionView.swift; sourceTree = "<group>"; };
+		968558732B90DF5C0090D5ED /* KeyboardPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardPadView.swift; sourceTree = "<group>"; };
 		968558752B90DF800090D5ED /* KeyboardPadCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardPadCollectionViewCell.swift; sourceTree = "<group>"; };
 		968558772B9112E40090D5ED /* IconCircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCircleButton.swift; sourceTree = "<group>"; };
 		9685587A2B91EACD0090D5ED /* DropDownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownButton.swift; sourceTree = "<group>"; };
 		9685587C2B923CDE0090D5ED /* AppStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyles.swift; sourceTree = "<group>"; };
 		96A5CA9C2B924B6B00F54A3B /* CapsulSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsulSegmentedControl.swift; sourceTree = "<group>"; };
 		96A5CAA02B924C0600F54A3B /* UIImage + imageFromColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + imageFromColor.swift"; sourceTree = "<group>"; };
+		96B8B6E32BAA3DE3001C448D /* MainScreenConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenConfigurator.swift; sourceTree = "<group>"; };
+		96B8B6E52BAB7EE9001C448D /* KeyboardPadCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardPadCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		96C0D38F2BAC632700C103F4 /* KeyboardPadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardPadView.xib; sourceTree = "<group>"; };
+		96C0D3922BAC860E00C103F4 /* UIViewController + LoadFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + LoadFromNib.swift"; sourceTree = "<group>"; };
+		96C0D3942BAC8CD200C103F4 /* KeyboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardButton.swift; sourceTree = "<group>"; };
+		96C0D3962BAC8E4400C103F4 /* KeyboardPadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardPadViewModel.swift; sourceTree = "<group>"; };
+		96C0D3992BADBC3A00C103F4 /* UIView + fromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + fromNib.swift"; sourceTree = "<group>"; };
+		96C0D39B2BADD94E00C103F4 /* KeyboardPadConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardPadConfigurator.swift; sourceTree = "<group>"; };
+		96C0D39E2BB2F3C200C103F4 /* String + hasValidDecimalPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + hasValidDecimalPlaces.swift"; sourceTree = "<group>"; };
+		96C0D3A02BB31F8A00C103F4 /* String + SeparateDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + SeparateDouble.swift"; sourceTree = "<group>"; };
+		96C0D3A62BB3354E00C103F4 /* CoreDataStack + TransactionCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataStack + TransactionCategory.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +105,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		961857442BA5BE6D001D6700 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				961857452BA5BE7D001D6700 /* CoreDataStack.swift */,
+				9618574A2BA89CCC001D6700 /* CoreDataStack + Account.swift */,
+				9618574C2BA8A106001D6700 /* CoreDataStack + Currency.swift */,
+				96C0D3A62BB3354E00C103F4 /* CoreDataStack + TransactionCategory.swift */,
+				9618575C2BA99C54001D6700 /* CoreDataStack + InitializeDataIfNeeded.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		961857602BA9E7F6001D6700 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				961857612BA9E8D7001D6700 /* UIColor + HexString.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
 		9685583B2B8FDBD30090D5ED = {
 			isa = PBXGroup;
 			children = (
@@ -80,14 +144,17 @@
 		968558462B8FDBD30090D5ED /* UpMoney */ = {
 			isa = PBXGroup;
 			children = (
+				96B8B6E22BAA3DC1001C448D /* Configurator */,
+				961857442BA5BE6D001D6700 /* Manager */,
 				96A5CA9E2B924BE200F54A3B /* Extentions */,
-				9685585B2B8FDD320090D5ED /* App */,
 				9685586B2B90B83E0090D5ED /* Models */,
 				9685586C2B90B8490090D5ED /* ViewModels */,
 				9685585D2B9094D90090D5ED /* Views */,
 				9685586D2B90C9ED0090D5ED /* Helpers */,
 				9685585C2B8FDD430090D5ED /* Assets */,
+				9685585B2B8FDD320090D5ED /* App */,
 				968558552B8FDBD40090D5ED /* Info.plist */,
+				961857412BA5B4C0001D6700 /* CoreDataModel.xcdatamodeld */,
 			);
 			path = UpMoney;
 			sourceTree = "<group>";
@@ -168,6 +235,12 @@
 		9685586B2B90B83E0090D5ED /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				961857712BA9F1CE001D6700 /* Account+CoreDataClass.swift */,
+				961857722BA9F1CE001D6700 /* Account+CoreDataProperties.swift */,
+				9618573C2BA3183C001D6700 /* TransactionType.swift */,
+				9618575E2BA9DFD7001D6700 /* Icon.swift */,
+				961857752BAA0874001D6700 /* Categorieble.swift */,
+				96C0D3942BAC8CD200C103F4 /* KeyboardButton.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,8 +265,11 @@
 		968558722B90DF060090D5ED /* Keyboard */ = {
 			isa = PBXGroup;
 			children = (
-				968558732B90DF5C0090D5ED /* KeyboardPadCollectionView.swift */,
+				968558732B90DF5C0090D5ED /* KeyboardPadView.swift */,
+				96C0D38F2BAC632700C103F4 /* KeyboardPadView.xib */,
 				968558752B90DF800090D5ED /* KeyboardPadCollectionViewCell.swift */,
+				96B8B6E52BAB7EE9001C448D /* KeyboardPadCollectionViewDataSource.swift */,
+				96C0D3962BAC8E4400C103F4 /* KeyboardPadViewModel.swift */,
 			);
 			path = Keyboard;
 			sourceTree = "<group>";
@@ -218,6 +294,10 @@
 		96A5CA9E2B924BE200F54A3B /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				96C0D39D2BB2F3B100C103F4 /* String */,
+				96C0D3982BADBC3200C103F4 /* UIView */,
+				96C0D3912BAC85F600C103F4 /* UIViewController */,
+				961857602BA9E7F6001D6700 /* UIColor */,
 				96A5CA9F2B924BED00F54A3B /* UIImage */,
 			);
 			path = Extentions;
@@ -229,6 +309,40 @@
 				96A5CAA02B924C0600F54A3B /* UIImage + imageFromColor.swift */,
 			);
 			path = UIImage;
+			sourceTree = "<group>";
+		};
+		96B8B6E22BAA3DC1001C448D /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				96B8B6E32BAA3DE3001C448D /* MainScreenConfigurator.swift */,
+				96C0D39B2BADD94E00C103F4 /* KeyboardPadConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		96C0D3912BAC85F600C103F4 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				96C0D3922BAC860E00C103F4 /* UIViewController + LoadFromNib.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		96C0D3982BADBC3200C103F4 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				96C0D3992BADBC3A00C103F4 /* UIView + fromNib.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		96C0D39D2BB2F3B100C103F4 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				96C0D39E2BB2F3C200C103F4 /* String + hasValidDecimalPlaces.swift */,
+				96C0D3A02BB31F8A00C103F4 /* String + SeparateDouble.swift */,
+			);
+			path = String;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +405,7 @@
 			files = (
 				968558542B8FDBD40090D5ED /* LaunchScreen.storyboard in Resources */,
 				968558512B8FDBD40090D5ED /* Assets.xcassets in Resources */,
+				96C0D3902BAC632700C103F4 /* KeyboardPadView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,22 +416,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				961857622BA9E8D7001D6700 /* UIColor + HexString.swift in Sources */,
+				961857432BA5B4C0001D6700 /* CoreDataModel.xcdatamodeld in Sources */,
 				9685586F2B90CA150090D5ED /* Observable.swift in Sources */,
+				961857762BAA0874001D6700 /* Categorieble.swift in Sources */,
+				96C0D3932BAC860E00C103F4 /* UIViewController + LoadFromNib.swift in Sources */,
 				9685587D2B923CDF0090D5ED /* AppStyles.swift in Sources */,
+				9618574B2BA89CCC001D6700 /* CoreDataStack + Account.swift in Sources */,
+				96C0D3972BAC8E4400C103F4 /* KeyboardPadViewModel.swift in Sources */,
+				9618575F2BA9DFD7001D6700 /* Icon.swift in Sources */,
 				9685584C2B8FDBD30090D5ED /* MainViewController.swift in Sources */,
 				968558482B8FDBD30090D5ED /* AppDelegate.swift in Sources */,
+				961857732BA9F1CE001D6700 /* Account+CoreDataClass.swift in Sources */,
+				96B8B6E62BAB7EE9001C448D /* KeyboardPadCollectionViewDataSource.swift in Sources */,
+				961857742BA9F1CE001D6700 /* Account+CoreDataProperties.swift in Sources */,
+				96C0D3A12BB31F8A00C103F4 /* String + SeparateDouble.swift in Sources */,
+				96C0D3952BAC8CD200C103F4 /* KeyboardButton.swift in Sources */,
+				96C0D39F2BB2F3C200C103F4 /* String + hasValidDecimalPlaces.swift in Sources */,
 				968558692B90AF620090D5ED /* SettingsViewController.swift in Sources */,
 				968558652B90AF2F0090D5ED /* AccountsViewController.swift in Sources */,
 				96A5CA9D2B924B6B00F54A3B /* CapsulSegmentedControl.swift in Sources */,
-				968558742B90DF5C0090D5ED /* KeyboardPadCollectionView.swift in Sources */,
+				968558742B90DF5C0090D5ED /* KeyboardPadView.swift in Sources */,
 				9685587B2B91EACD0090D5ED /* DropDownButton.swift in Sources */,
+				9618575D2BA99C54001D6700 /* CoreDataStack + InitializeDataIfNeeded.swift in Sources */,
+				9618574D2BA8A106001D6700 /* CoreDataStack + Currency.swift in Sources */,
 				968558672B90AF4D0090D5ED /* StatisticsViewController.swift in Sources */,
+				96B8B6E42BAA3DE3001C448D /* MainScreenConfigurator.swift in Sources */,
 				968558762B90DF800090D5ED /* KeyboardPadCollectionViewCell.swift in Sources */,
 				96A5CAA12B924C0600F54A3B /* UIImage + imageFromColor.swift in Sources */,
 				9685584A2B8FDBD30090D5ED /* SceneDelegate.swift in Sources */,
+				961857462BA5BE7D001D6700 /* CoreDataStack.swift in Sources */,
 				9685585F2B9095520090D5ED /* TabBar.swift in Sources */,
 				968558782B9112E40090D5ED /* IconCircleButton.swift in Sources */,
 				968558712B90D5F50090D5ED /* MainViewModel.swift in Sources */,
+				96C0D39C2BADD94E00C103F4 /* KeyboardPadConfigurator.swift in Sources */,
+				96C0D39A2BADBC3A00C103F4 /* UIView + fromNib.swift in Sources */,
+				9618573D2BA3183C001D6700 /* TransactionType.swift in Sources */,
+				96C0D3A72BB3354E00C103F4 /* CoreDataStack + TransactionCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +475,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -402,6 +539,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -537,6 +675,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		961857412BA5B4C0001D6700 /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				961857422BA5B4C0001D6700 /* CoreDataModel.xcdatamodel */,
+			);
+			currentVersion = 961857422BA5B4C0001D6700 /* CoreDataModel.xcdatamodel */;
+			name = CoreDataModel.xcdatamodeld;
+			path = /Users/dulingleb/Desktop/xcode/UpMoney/UpMoney/CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9685583C2B8FDBD30090D5ED /* Project object */;
 }

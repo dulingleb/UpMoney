@@ -49,20 +49,28 @@ class KeyboardPadCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(withText text: String?) {
-        textLabel.text = text
+    func configure(_ button: KeyboardButton) {
+        switch button.type {
+            case .digit: configureDigit(withButton: button)
+            case .backspace: configureImage(withButton: button)
+        }
+    }
+    
+    func configureImage(withButton button: KeyboardButton) {
+        imageView.image = button.icon?.uiImage()
         
-        if text == "." {
+        textLabel.isHidden = true
+        imageView.isHidden = false
+    }
+    
+    func configureDigit(withButton button: KeyboardButton) {
+        textLabel.text = button.rawValue
+        
+        if button == .dot {
             textLabel.font = .systemFont(ofSize: 24, weight: .black)
         }
         
-        textLabel.isHidden = text == nil
+        textLabel.isHidden = false
         imageView.isHidden = true
-    }
-    
-    func configure(withImage image: UIImage?) {
-        imageView.image = image
-        imageView.isHidden = image == nil
-        textLabel.isHidden = true
     }
 }

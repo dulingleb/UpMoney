@@ -18,13 +18,13 @@ class IconCircleButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(iconName: String) {
+    func configure(icon: Icon) {
         let configuration = UIButton.Configuration.gray()
         self.configuration = configuration
         self.layer.cornerRadius = iconSize / 2
         self.clipsToBounds = true
         
-        self.setImage(UIImage(named: iconName), for: .normal)
+        self.setImage(icon.uiImage(), for: .normal)
         self.tintColor = UIColor(named: "cBlack")
         self.widthAnchor.constraint(equalToConstant: iconSize).isActive = true
         self.heightAnchor.constraint(equalToConstant: iconSize).isActive = true

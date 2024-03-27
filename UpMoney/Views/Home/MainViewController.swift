@@ -7,35 +7,33 @@
 
 import UIKit
 
-extension UISegmentedControl {
-    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
-        let maskPath = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-        let maskLayer = CAShapeLayer()
-        maskLayer.frame = bounds
-        maskLayer.path = maskPath.cgPath
-        layer.mask = maskLayer
-    }
+protocol MainViewControllerProtocol: AnyObject {
+    func setupInitialState(segments: [TransactionType])
+    func setupKeyboardPadDelegate(delegate: KeyboardNumberDelegate)
+    func updateAccountButton(account: Categorieble?, hasArrow: Bool)
+    func updateAmountLabel(amount: String, color: UIColor)
 }
 
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
     private let heightBottomBtnStack = 50.0
     
-    let keyboardPadCollectionView: KeyboardPadCollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        let kPad = KeyboardPadCollectionView(frame: .zero, collectionViewLayout: layout)
-        kPad.translatesAutoresizingMaskIntoConstraints = false
-        return kPad
+    var viewModel: MainViewModelProtocol?
+    
+    let keyboardPadCollectionView: KeyboardPadView = {
+        let kb = KeyboardPadConfigurator.instatiateModule()
+        kb.translatesAutoresizingMaskIntoConstraints = false
+        return kb
     }()
     
     let calendarButton: IconCircleButton = {
         let btn = IconCircleButton(type: .custom)
-        btn.configure(iconName: "Calendar")
+        btn.configure(icon: .calendar)
         return btn
     }()
     
     let commentButton: IconCircleButton = {
         let btn = IconCircleButton(type: .custom)
-        btn.configure(iconName: "Edit")
+        btn.configure(icon: .edit)
         return btn
     }()
     
@@ -87,17 +85,19 @@ class MainViewController: UIViewController {
     let chooseAccauntButton: DropDownButton = DropDownButton()
     
     let transactionTypeSegment: CapsulSegmentedControl = {
-        let segment = CapsulSegmentedControl(items: ["Expense", "Income", "Transfer"])
-        segment.selectedSegmentIndex = 0
+        let segment = CapsulSegmentedControl()
         segment.translatesAutoresizingMaskIntoConstraints = false
         return segment
     }()
+    
+    lazy var choseIncomeButton: DropDownButton = DropDownButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupViews()
         setConstraints()
+        viewModel?.viewLoaded()
+
     }
     
     private func setupViews() {
@@ -106,7 +106,7 @@ class MainViewController: UIViewController {
         bottomBtnStackView.addArrangedSubview(commentButton)
         
         chooseAccauntButton.setRightArrow()
-        chooseAccauntButton.setLeftImage(leftImage: UIImage(named: "Calendar")!, tintColor: .systemBlue)
+        chooseAccauntButton.setLeftImage(leftImage: .calendar, tintColor: .systemBlue)
         chooseAccauntButton.setTitle("Category", for: .normal)
         accountStackView.addArrangedSubview(chooseAccauntButton)
         
@@ -117,6 +117,18 @@ class MainViewController: UIViewController {
         view.addSubview(accountStackView)
         view.addSubview(amountLabel)
         view.addSubview(transactionTypeSegment)
+        
+        transactionTypeSegment.addTarget(self, action: #selector(self.transactionTypeSegmentChanged(_:)), for: .valueChanged)
+    }
+    
+    @objc func transactionTypeSegmentChanged(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+            case TransactionType.expense.index: print("expense")
+            case TransactionType.income.index: print("income")
+            case TransactionType.transfer.index: print("transfer")
+        default:
+            return
+        }
     }
 }
 
@@ -147,5 +159,27 @@ extension MainViewController {
             transactionTypeSegment.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: AppStyles.Layout.m36),
             transactionTypeSegment.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -AppStyles.Layout.m36),
         ])
+    }
+}
+
+extension MainViewController: MainViewControllerProtocol {
+    func setupKeyboardPadDelegate(delegate: KeyboardNumberDelegate) {
+        self.keyboardPadCollectionView.viewModel?.delegate = delegate
+    }
+    
+    func setupInitialState(segments: [TransactionType]) {
+        segments.forEach { s in
+            transactionTypeSegment.insertSegment(withTitle: s.title, at: s.index, animated: false)
+        }
+        transactionTypeSegment.selectedSegmentIndex = TransactionType.expense.index
+    }
+    
+    func updateAccountButton(account: Categorieble?, hasArrow: Bool = true) {
+        chooseAccauntButton.configure(category: account, hasArrow: hasArrow)
+    }
+    
+    func updateAmountLabel(amount: String, color: UIColor = .cBlack) {
+        amountLabel.text = amount
+        amountLabel.textColor = color
     }
 }

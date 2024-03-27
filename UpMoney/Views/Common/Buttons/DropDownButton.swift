@@ -33,7 +33,7 @@ class DropDownButton: UIButton {
         }
     }
     
-    var rightImage: UIImage? = UIImage(named: "ArrowDown")
+    var rightImage: UIImage? = Icon.arrowDown.uiImage()
 
     
     override init(frame: CGRect) {
@@ -110,8 +110,8 @@ class DropDownButton: UIButton {
        )
     }
     
-    public func setLeftImage(leftImage: UIImage, tintColor: UIColor) {
-        self.leftImage = leftImage
+    public func setLeftImage(leftImage: Icon, tintColor: UIColor) {
+        self.leftImage = leftImage.uiImage()
         self.leftImageView.tintColor = tintColor
         updateContentInsets()
     }
@@ -119,6 +119,12 @@ class DropDownButton: UIButton {
     public func setRightArrow(_ hasArrow: Bool = true) {
         self.hasArrow = hasArrow
         updateContentInsets()
+    }
+    
+    public func configure(category: Categorieble?, hasArrow: Bool = false) {
+        self.setTitle(category?._name ?? "Test", for: .normal)
+        setLeftImage(leftImage: category?._icon ?? .wallet, tintColor: category?._iconColor ?? .systemOrange)
+        setRightArrow(hasArrow)
     }
 
 }

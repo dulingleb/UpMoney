@@ -17,10 +17,10 @@ class TabBar: UITabBarController {
     }
     
     fileprivate func createNavController(for rootViewController: UIViewController,
-                                         image: UIImage,
+                                         icon: Icon,
                                          title: String? = nil) -> UIViewController {
         let navController = UINavigationController(rootViewController: rootViewController)
-        navController.tabBarItem.image = image
+        navController.tabBarItem.image = icon.uiImage()
         navController.navigationBar.prefersLargeTitles = true
         rootViewController.navigationItem.title = title
         return navController
@@ -28,10 +28,10 @@ class TabBar: UITabBarController {
     
     func setupVCs() {
         viewControllers = [
-            createNavController(for: MainViewController(), image: UIImage(named: "Home")!),
-            createNavController(for: AccountsViewController(), image: UIImage(named: "Wallet")!, title: NSLocalizedString("Accounts", comment: "")),
-            createNavController(for: StatisticsViewController(), image: UIImage(named: "PieChart")!, title: NSLocalizedString("Statistics", comment: "")),
-            createNavController(for: SettingsViewController(), image: UIImage(named: "Settings")!, title: NSLocalizedString("Settings", comment: ""))
+            createNavController(for: MainScreenConfigurator.instantiateModule(), icon: .home),
+            createNavController(for: AccountsViewController(), icon: .wallet, title: NSLocalizedString("Accounts", comment: "")),
+            createNavController(for: StatisticsViewController(), icon: .pieChart, title: NSLocalizedString("Statistics", comment: "")),
+            createNavController(for: SettingsViewController(), icon: .setting, title: NSLocalizedString("Settings", comment: ""))
         ]
     }
 }
